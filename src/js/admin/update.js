@@ -96,7 +96,13 @@ function showLoader(id) {
  * @param id
  */
 function hideLoader(id) {
-    document.getElementById(`${id}-btn`).style.display = 'block';
+	try {
+	    document.getElementById(`${id}-btn`).style.display = 'block';
+	}
+    catch (err) {
+		// Nothing to do.  Show error for edification
+		console.log(err)
+    }
     const loader = document.getElementById(`${id}-loader`)
     if (loader)
         loader.style.display = 'none';
