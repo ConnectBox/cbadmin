@@ -1,0 +1,14 @@
+extends ../../../layout/form
+include ../../../mixins/button-save
+
+
+block icon
+    include ../../../icons/save
+
+block title
+    | Download Stats
+
+block form
+    p
+        a(href="/admin/api/downloadweblog") Download as CSV File
+
