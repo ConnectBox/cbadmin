@@ -1,6 +1,11 @@
 extends ../../../layout/form
-include ../../../mixins/button-save
-
+mixin script(name, id)
+    div.mt-3
+        include  ../../../icons/settings
+        = name
+        .float-end
+            button.bg-transparent.border-0.text-primary.p-0(id=`${id}-button`)
+                include  ../../../icons/play
 
 block icon
     include ../../../icons/chart
@@ -8,7 +13,6 @@ block icon
 block title
     | Delete Stats
 
-block form
-    p
-        a(href="/admin/api/deleteweblog") Delete All stats
+block content
+    +script('Delete Stats', 'deleteweblogs')
 

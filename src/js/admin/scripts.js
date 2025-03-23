@@ -13,7 +13,8 @@ const messages = {
     shutdown:'System shutdown',
     reboot:'System reboot',
     reset:'System reset',
-    sync:'Sync With Server'
+    sync:'Sync With Server',
+    deleteweblogs:'Delete Stats'
 }
 
 /**
