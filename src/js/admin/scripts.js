@@ -72,10 +72,10 @@ function attachAdvanced(id,token) {
 export default function attachSystemScripts(token){
     attachSystemScript('openwellusb', token);
     attachSystemScript('openwellrefresh', token);
+    attachSystemScript('deleteweblog', token);
     attachSystemScript('shutdown', token);
     attachSystemScript('reboot', token);
     attachSystemScript('sync', token);
-    attachSystemScript('deleteweblog', token);
     attachAdvanced('advanced', token);
     //attachSystemScript('reset', token);
 }
