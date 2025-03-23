@@ -14,7 +14,7 @@ const messages = {
     reboot:'System reboot',
     reset:'System reset',
     sync:'Sync With Server',
-    deleteweblogs:'Delete Stats'
+    deleteweblog:'Delete Stats'
 }
 
 /**
@@ -75,6 +75,7 @@ export default function attachSystemScripts(token){
     attachSystemScript('shutdown', token);
     attachSystemScript('reboot', token);
     attachSystemScript('sync', token);
+    attachSystemScript('deleteweblog', token);
     attachAdvanced('advanced', token);
     //attachSystemScript('reset', token);
 }
