@@ -1,3 +1,21 @@
+/**
+ * @fileoverview Save-callback wiring for the cbadmin admin dashboard.
+ *
+ * Attaches click/change event listeners to every editable control on the admin
+ * page so that when the user saves a field it is sent to the connectbox-manage
+ * API via a PUT request.  The exported attachUpdateCallbacks() function is
+ * called once from admin.js after the page loads.
+ *
+ * Four attachment helpers cover the control types used on the page:
+ * - attachUpdateCallbackToTextField: text input → PUT /:name
+ * - attachUpdateCallbackToSwitch: toggle switch → PUT /:name with 0/1
+ * - attachUpdateBrandCallbackToTextField: text input → PUT /brand with Key=Value
+ * - attachUpdateBrandCallbackToSwitch: toggle switch → PUT /brand with Key=0/1
+ *
+ * LMS (Moodle) callbacks are only registered when ismoodle returns true,
+ * to avoid referencing DOM elements that may not exist on non-Moodle devices.
+ */
+
 import {API_URL, del, get, post, put} from "../api/api";
 import openSnackBar from "../components/snackbar";
 import openPopup from "../components/popup";
@@ -24,6 +42,13 @@ function errorCallback(code) {
     openSnackBar(`Unable to Save To Database`);
 }
 
+/**
+ * Show a snackbar when the password and confirm-password fields don't match.
+ *
+ * Called by setProperty() before sending the PUT request when the field name
+ * is 'password', so the user gets immediate feedback without a round-trip to
+ * the server.
+ */
 function passwordMismatch() {
 	openSnackBar('Sorry, your passwords do not match');
 }

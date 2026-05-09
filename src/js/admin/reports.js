@@ -1,3 +1,17 @@
+/**
+ * @fileoverview Reporting section initialisation for the cbadmin admin dashboard.
+ *
+ * Provides two reports:
+ * 1. Top-10 content items — fetched from /admin/api/topten, displayed by
+ *    time period (hour, day, week, month, year) via a period-type selector.
+ * 2. All-content stats — fetched from /admin/api/stats, paginated and
+ *    filterable by period type (year, month, week) and specific period
+ *    (e.g. '2025', '202505', '2025W19').
+ *
+ * The exported renderReportList() is also called by other modules when they
+ * need to update a report list programmatically without re-fetching.
+ */
+
 import { API_URL, get} from "../api/api";
 
 const RESULTS_PER_PAGE = 5

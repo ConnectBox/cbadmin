@@ -1,3 +1,16 @@
+/**
+ * @fileoverview Low-level HTTP helpers for the cbadmin frontend.
+ *
+ * All API calls go through one of the four exported functions (get, put, post,
+ * del).  Each wraps XMLHttpRequest with a consistent callback contract:
+ * callbackSuccess receives the unwrapped result array, callbackError receives
+ * the HTTP status code and raw response text.
+ *
+ * The analyseResponse helper enforces the {code, result} envelope that
+ * connectbox-manage returns: a non-zero code or non-2xx status is treated as
+ * an error and routed to callbackError.
+ */
+
 export const API_URL = `/admin/api/`;
 export const ASSETS_URL = `/__connectbox_assets__/`;
 

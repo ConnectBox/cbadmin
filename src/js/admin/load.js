@@ -1,3 +1,20 @@
+/**
+ * @fileoverview Initial config fetch and renderer wiring for the cbadmin dashboard.
+ *
+ * The exported default function (called from admin.js on window load) fetches
+ * every readable device setting via the connectbox-manage API and renders each
+ * value into the correct DOM element using a per-field renderer function.
+ *
+ * Renderer functions translate the raw API value (string, array, or number)
+ * into the appropriate DOM mutation: setting an input value, populating a
+ * <select>, activating a toggle switch, or showing/hiding elements based on
+ * a feature flag (e.g. isMoodleRenderer).
+ *
+ * clientwifiscan is deliberately not loaded on page load because the iw scan
+ * takes several seconds — it is instead triggered by a user click via
+ * attachListenerForClientWifiScan().
+ */
+
 import {API_URL, del, get} from "../api/api";
 import {alphaSortWithKey, appendOptionsToSelect} from '../utils/utils';
 import openSnackBar from "../components/snackbar";
