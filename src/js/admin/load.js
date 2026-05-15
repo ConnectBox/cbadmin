@@ -59,7 +59,7 @@ function defaultRenderer(element, value) {
  */
 function switchRenderer(element, value) {
     const state = value[0];
-    if (state == '"1"' || state == '1' || state == 1) activateSwitch(element.id); // Added by DM 20220104 to handle integer values in the brand.txt
+    if (state == '"1"' || state == '1' || state == 1) activateSwitch(element.id);
     else if (state === 'none' || (state != '"0"' && state != '0' && state != 0)) {  // Added by DM 20220128 to handle OTG
 		console.log('Hiding Element:' + element.id);
 		var element = document.getElementById(element.id)
