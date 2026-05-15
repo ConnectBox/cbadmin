@@ -1,5 +1,5 @@
 /**
- * @fileoverview Reporting section initialisation for the cbadmin admin dashboard.
+ * @fileoverview Reporting section initialisation for the connectbox-admin-ui admin dashboard.
  *
  * Provides two reports:
  * 1. Top-10 content items — fetched from /admin/api/topten, displayed by

@@ -1,5 +1,5 @@
 /**
- * @fileoverview Admin dashboard entry point for cbadmin.
+ * @fileoverview Admin dashboard entry point for connectbox-admin-ui.
  *
  * Bootstraps the admin page by:
  * 1. Registering Web Components (custom-accordion, custom-switch).

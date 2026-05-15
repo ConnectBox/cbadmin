@@ -1,5 +1,5 @@
 /**
- * @fileoverview System-action button wiring for the cbadmin admin dashboard.
+ * @fileoverview System-action button wiring for the connectbox-admin-ui admin dashboard.
  *
  * Connects the system-action buttons (shutdown, reboot, sync, openwellusb, etc.)
  * to GET /admin/api/do/:command requests.  Each action is fire-and-forget: the

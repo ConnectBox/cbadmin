@@ -1,5 +1,5 @@
 /**
- * @fileoverview Initial config fetch and renderer wiring for the cbadmin dashboard.
+ * @fileoverview Initial config fetch and renderer wiring for the connectbox-admin-ui dashboard.
  *
  * The exported default function (called from admin.js on window load) fetches
  * every readable device setting via the connectbox-manage API and renders each

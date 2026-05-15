@@ -1,5 +1,5 @@
 /**
- * @fileoverview Low-level HTTP helpers for the cbadmin frontend.
+ * @fileoverview Low-level HTTP helpers for the connectbox-admin-ui frontend.
  *
  * All API calls go through one of the four exported functions (get, put, post,
  * del).  Each wraps XMLHttpRequest with a consistent callback contract:

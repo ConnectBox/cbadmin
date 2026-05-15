@@ -3,6 +3,7 @@
     "build": "rm -rf dist && pug src/templates/views --out dist && webpack",
     "deploy": "npm run build && rm -rf /var/www/html/* && cp -r dist/* /var/www/html"
   },
+  "name": "connectbox-admin-ui",
   "main": "src/js/index.js",
   "engines": {
     "node": "16"

@@ -1,5 +1,5 @@
 /**
- * @fileoverview Login page entry point for the cbadmin admin UI.
+ * @fileoverview Login page entry point for the connectbox-admin-ui admin UI.
  *
  * Handles the login form submission: encodes the password as Basic auth,
  * sends a PUT to /admin/api/auth, and redirects to /admin on success.

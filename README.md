@@ -1,5 +1,5 @@
-# cbadmin
-Redesigned Connectbox Admin Interface
+# connectbox-admin-ui
+ConnectBox Admin Interface
 
 # Introduction
 Watch [this video](https://www.loom.com/share/c8f7deb037b4445c8ad3be3e0f44318e?sharedAppSource=personal_library)

@@ -1,5 +1,5 @@
 /**
- * @fileoverview Log viewer page entry point for cbadmin.
+ * @fileoverview Log viewer page entry point for connectbox-admin-ui.
  *
  * Reads the URL hash fragment (e.g. logs.html#webserver) to determine which
  * log source to display.  'wifistatus' is handled as a special case via the

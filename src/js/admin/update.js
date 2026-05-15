@@ -1,5 +1,5 @@
 /**
- * @fileoverview Save-callback wiring for the cbadmin admin dashboard.
+ * @fileoverview Save-callback wiring for the connectbox-admin-ui admin dashboard.
  *
  * Attaches click/change event listeners to every editable control on the admin
  * page so that when the user saves a field it is sent to the connectbox-manage
